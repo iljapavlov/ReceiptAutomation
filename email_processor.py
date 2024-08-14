@@ -74,6 +74,7 @@ class EmailProcessor:
     def get_email_content(self, email_message):
         if email_message.is_multipart():
             for part in email_message.walk():
+                print('content type', part.get_content_type())
                 if part.get_content_type() in ["text/plain", "text/html"]:
                     return part.get_payload(decode=True).decode(errors='replace')
         else:
@@ -185,6 +186,5 @@ if __name__ == "__main__":
     df = processor.to_dataframe(parsed_emails)
     processor.disconnect()
 
-    # Display the DataFrame
     print(df)
     df.to_csv('output.csv')
