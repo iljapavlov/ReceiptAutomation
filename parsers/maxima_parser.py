@@ -39,7 +39,7 @@ def maxima_parser(html_content, verbose = False):
             products.append({
                 'name': product_name,
                 'quantity': quantity,
-                'quantity_unit':quantity_unit,
+                'quantity unit':quantity_unit,
                 'price': price
             })
         elif len(cells) == 2 and 'Discount' in cells[0].text:
