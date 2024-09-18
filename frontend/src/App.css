@@ -1,12 +1,16 @@
 .App {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   
   h1 {
     text-align: center;
+    margin-bottom: 20px;
   }
   
   .progress {
@@ -16,10 +20,12 @@
   }
   
   .partner-info {
-    background-color: #f0f0f0;
+    background-color: #252525;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
   }
   
   .categories {
@@ -28,7 +34,7 @@
   
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 15px;
   }
   
@@ -37,7 +43,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 80px;
     padding: 10px;
     font-size: 14px;
     cursor: pointer;
@@ -82,5 +88,48 @@
   }
   
   .back-button:hover {
+    background-color: #45a049;
+  }
+  
+  .insights-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .insights-content {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .file-upload {
+    margin-bottom: 20px;
+  }
+  
+  .insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100vw, 1fr));
+    gap: 20px;
+  }
+  
+  .insight-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .categorize-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .categorize-button:hover {
     background-color: #45a049;
   }
