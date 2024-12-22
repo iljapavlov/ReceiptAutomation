@@ -107,10 +107,14 @@ function InsightsPage({ onCategorize, statementData, setStatementData }) {
 
   return (
     <div className="insights-container">
-      <h1>Transaction Insights</h1>
-      <div className="file-upload">
-        <input type="file" onChange={handleFileUpload} accept=".csv" />
-      </div>
+        {!statementData && (
+            <>
+                <h1>Transaction Insights</h1>
+                <div className="file-upload"> 
+                    <input type="file" onChange={handleFileUpload} accept=".csv" />
+                </div>
+            </>
+        )}
       <div className="insights-content">
         {renderDashboard()}
         {renderInsights()}

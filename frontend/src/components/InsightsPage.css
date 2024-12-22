@@ -31,13 +31,14 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    gap: 20px;
   }
   
   .summary-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    width: 60%;
+    width: 50%;
   }
   
   .summary-item {
@@ -60,7 +61,7 @@ body {
   }
   
   .pie-chart {
-    width: 35%;
+    width: 45%;
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
